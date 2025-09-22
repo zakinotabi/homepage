@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+
     <title>About me</title>
   </head>
   <body>
     <header>
       <div class="header-bg"></div>
-      <section class="header-section">
+      <section aria-labelledby="about-me-box" class="header-section">
         <div class="header-picture-container">
           <h1>Zaki Notabi</h1>
           <picture>
             <source media="(max-width:600px)" srcset="./img/my-cowboy-pokemon-cropped.jpg" />
-            <img class="my-header-picture" src="./img/my-cowboy-pokemon.jpg" alt="" />
+            <img class="my-header-picture" src="./img/my-cowboy-pokemon.jpg" alt="Zaki profile picture shows cowboy pokemon" fetchpriority="high" />
           </picture>
         </div>
-        <div class="about-me-box">
+        <div id="about-me-box" class="about-me-box">
           <h2>About me</h2>
           <p class="intro-paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ducimus. Nostrum id numquam quo, pariatur eligendi dolore sit? Animi,
@@ -26,91 +28,109 @@
             quis? Dolorem magnam perspiciatis accusamus doloremque laudantium?
           </p>
           <div class="intro-icons">
-            <a href="https://github.com/zakinotabi" target="_blank"> <img src="./img/icons/social_github_icon.svg" alt="" /></a>
-            <a href="#"><img src="./img/icons/linkedin_icon.svg" alt="" /></a>
-            <a href="https://discordapp.com/users/kino_555" target="_blank"><img src="./img/icons/discord-icon.svg" alt="" /></a>
-            <a href="#"><img src="./img/icons/x_twitter new logo_icon.svg" alt="" /></a>
+            <a href="https://github.com/zakinotabi" target="_blank"> <img src="./img/icons/social_github_icon.svg" alt="github profile" /></a>
+            <a href="#"><img src="./img/icons/linkedin_icon.svg" alt="linkedin profile" /></a>
+            <a href="https://discordapp.com/users/kino_555" target="_blank"><img src="./img/icons/discord-icon.svg" alt="discord profile" /></a>
+            <a href="#"><img src="./img/icons/x_twitter new logo_icon.svg" alt="X profile" /></a>
           </div>
         </div>
       </section>
     </header>
     <main>
-      <section class="projects-section">
-        <h2>My work</h2>
+      <section aria-labelledby="my-work" class="projects-section">
+        <h2 id="my-work">My work</h2>
         <div class="all-projects-boxes">
           <div class="project-box">
-            <div class="project-screenshot"><img src="./img/battleship.png" alt="" /></div>
+            <div class="project-screenshot"><img src="./img/battleship.png" alt="web page screenshot" /></div>
             <div class="project-info-container">
               <div class="project-title-container">
                 <h3 class="project-title">Battleship Game</h3>
                 <div class="project-icons">
-                  <a href="https://github.com/zakinotabi/battleship" target="_blank"><img src="./img/icons/social_github_icon.svg" alt="" /></a>
-                  <a href="https://zakinotabi.github.io/battleship/" target="_blank"><img src="./img/icons/open_in_window_icon.svg" alt="" /></a>
+                  <a href="https://github.com/zakinotabi/battleship" target="_blank"
+                    ><img src="./img/icons/social_github_icon.svg" alt="repo web page"
+                  /></a>
+                  <a href="https://zakinotabi.github.io/battleship/" target="_blank"
+                    ><img src="./img/icons/open_in_window_icon.svg" alt="preview"
+                  /></a>
                 </div>
               </div>
               <div class="project-description">A modern, interactive implementation of the classic Battleship board.</div>
             </div>
           </div>
           <div class="project-box">
-            <div class="project-screenshot"><img src="./img/weather.png" alt="" /></div>
+            <div class="project-screenshot"><img src="./img/weather.png" alt="web page screenshot" /></div>
             <div class="project-info-container">
               <div class="project-title-container">
                 <h3 class="project-title">Weather app</h3>
                 <div class="project-icons">
-                  <a href="https://github.com/zakinotabi/weather" target="_blank"><img src="./img/icons/social_github_icon.svg" alt="" /></a>
-                  <a href="https://zakinotabi.github.io/weather/" target="_blank"><img src="./img/icons/open_in_window_icon.svg" alt="" /></a>
+                  <a href="https://github.com/zakinotabi/weather" target="_blank"
+                    ><img src="./img/icons/social_github_icon.svg" alt="repo web page"
+                  /></a>
+                  <a href="https://zakinotabi.github.io/weather/" target="_blank"><img src="./img/icons/open_in_window_icon.svg" alt="preview" /></a>
                 </div>
               </div>
               <div class="project-description">A Weather app that gives live weather forecast based on location built with free API.</div>
             </div>
           </div>
           <div class="project-box">
-            <div class="project-screenshot"><img src="./img/todo.png" alt="" /></div>
+            <div class="project-screenshot"><img src="./img/todo.png" alt="web page screenshot" /></div>
             <div class="project-info-container">
               <div class="project-title-container">
                 <h3 class="project-title">Todo list</h3>
                 <div class="project-icons">
-                  <a href="https://github.com/zakinotabi/todo-list" target="_blank"><img src="./img/icons/social_github_icon.svg" alt="" /></a>
-                  <a href="https://zakinotabi.github.io/todo-list" target="_blank"><img src="./img/icons/open_in_window_icon.svg" alt="" /></a>
+                  <a href="https://github.com/zakinotabi/todo-list" target="_blank"
+                    ><img src="./img/icons/social_github_icon.svg" alt="repo web page"
+                  /></a>
+                  <a href="https://zakinotabi.github.io/todo-list" target="_blank"><img src="./img/icons/open_in_window_icon.svg" alt="preview" /></a>
                 </div>
               </div>
               <div class="project-description">A minimal Todo list app that uses local memory to save data</div>
             </div>
           </div>
           <div class="project-box">
-            <div class="project-screenshot"><img src="./img/restaurant.png" alt="" /></div>
+            <div class="project-screenshot"><img src="./img/restaurant.png" alt="web page screenshot" /></div>
             <div class="project-info-container">
               <div class="project-title-container">
                 <h3 class="project-title">Restaurant page</h3>
                 <div class="project-icons">
-                  <a href="https://github.com/zakinotabi/restaurant-page-" target="_blank"><img src="./img/icons/social_github_icon.svg" alt="" /></a>
-                  <a href="https://zakinotabi.github.io/restaurant-page-" target="_blank"><img src="./img/icons/open_in_window_icon.svg" alt="" /></a>
+                  <a href="https://github.com/zakinotabi/restaurant-page-" target="_blank"
+                    ><img src="./img/icons/social_github_icon.svg" alt="repo web page"
+                  /></a>
+                  <a href="https://zakinotabi.github.io/restaurant-page-" target="_blank"
+                    ><img src="./img/icons/open_in_window_icon.svg" alt="preview"
+                  /></a>
                 </div>
               </div>
               <div class="project-description">A Modern elegant restaurant website example</div>
             </div>
           </div>
           <div class="project-box">
-            <div class="project-screenshot"><img src="./img/calculator.png" alt="" /></div>
+            <div class="project-screenshot"><img src="./img/calculator.png" alt="web page screenshot" /></div>
             <div class="project-info-container">
               <div class="project-title-container">
                 <h3 class="project-title">Calculator</h3>
                 <div class="project-icons">
-                  <a href="https://github.com/zakinotabi/Calculator" target="_blank"><img src="./img/icons/social_github_icon.svg" alt="" /></a>
-                  <a href="https://zakinotabi.github.io/Calculator" target="_blank"><img src="./img/icons/open_in_window_icon.svg" alt="" /></a>
+                  <a href="https://github.com/zakinotabi/Calculator" target="_blank"
+                    ><img src="./img/icons/social_github_icon.svg" alt="repo web page"
+                  /></a>
+                  <a href="https://zakinotabi.github.io/Calculator" target="_blank"
+                    ><img src="./img/icons/open_in_window_icon.svg" alt="preview"
+                  /></a>
                 </div>
               </div>
               <div class="project-description">Live calculator using basic js</div>
             </div>
           </div>
           <div class="project-box">
-            <div class="project-screenshot"><img src="./img/tictactoe.png" alt="" /></div>
+            <div class="project-screenshot"><img src="./img/tictactoe.png" alt="web page screenshot" /></div>
             <div class="project-info-container">
               <div class="project-title-container">
                 <h3 class="project-title">Tictactoe</h3>
                 <div class="project-icons">
-                  <a href="https://github.com/zakinotabi/tictactoe" target="_blank"><img src="./img/icons/social_github_icon.svg" alt="" /></a>
-                  <a href="https://zakinotabi.github.io/tictactoe" target="_blank"><img src="./img/icons/open_in_window_icon.svg" alt="" /></a>
+                  <a href="https://github.com/zakinotabi/tictactoe" target="_blank"
+                    ><img src="./img/icons/social_github_icon.svg" alt="repo web page"
+                  /></a>
+                  <a href="https://zakinotabi.github.io/tictactoe" target="_blank"><img src="./img/icons/open_in_window_icon.svg" alt="preview" /></a>
                 </div>
               </div>
               <div class="project-description">Just the classic game, with some smooth animation</div>
@@ -120,34 +140,34 @@
       </section>
     </main>
     <footer>
-      <section class="footer-section">
+      <section aria-labelledby="contact-me" class="footer-section">
         <div class="footer-info-container">
-          <h2>Contact Me</h2>
+          <h2 id="contact-me">Contact Me</h2>
           <p>Please get in touch is you think our work could be mutually beneficial!</p>
           <div class="footer-contact">
             <div class="contact-info">
-              <img src="./img/icons/location_pin_position_icon.svg" alt="" />
+              <img src="./img/icons/location_pin_position_icon.svg" alt="location icon" />
               <div>1324 Random road, Random Town,City 1234</div>
             </div>
             <div class="contact-info">
-              <img src="./img/icons/phone_telephone_icon.svg" alt="" />
+              <img src="./img/icons/phone_telephone_icon.svg" alt="phone icon" />
               <div>00112234567</div>
             </div>
             <div class="contact-info">
-              <img src="./img/icons/mail_email_icon.svg" alt="" />
+              <img src="./img/icons/mail_email_icon.svg" alt="email icon" />
               <div>notanemail@none.com</div>
             </div>
           </div>
           <div class="footer-icons">
-            <a href="https://github.com/zakinotabi" target="_blank"> <img src="./img/icons/social_github_icon.svg" alt="" /></a>
-            <a href="#"><img src="./img/icons/linkedin_icon.svg" alt="" /></a>
-            <a href="https://discordapp.com/users/kino_555" target="_blank"><img src="./img/icons/discord-icon.svg" alt="" /></a>
-            <a href="#"><img src="./img/icons/x_twitter new logo_icon.svg" alt="" /></a>
+            <a href="https://github.com/zakinotabi" target="_blank"> <img src="./img/icons/social_github_icon.svg" alt="github profile" /></a>
+            <a href="#"><img src="./img/icons/linkedin_icon.svg" alt="linkedin profile" /></a>
+            <a href="https://discordapp.com/users/kino_555" target="_blank"><img src="./img/icons/discord-icon.svg" alt="discord profile" /></a>
+            <a href="#"><img src="./img/icons/x_twitter new logo_icon.svg" alt="X profile" /></a>
           </div>
         </div>
         <picture>
           <source media="(max-width:1024px)" srcset="./img/building-cropped.jpg" />
-          <img class="footer-image" src="./img/building.jpg" alt="" />
+          <img class="footer-image" src="./img/building.jpg" alt="a building image in an ambient atmosphere" />
         </picture>
       </section>
     </footer>
